@@ -38,7 +38,7 @@ public class SecurityFiler implements ContainerRequestFilter {
 //    /**
 //     * Para este caso se deve de colocar en el Header:
 //     *
-//     * Authorization : Basic "VALOR DEL TOKEN"
+//     * Authorization : Basic CREDENCIALES_ENCODE
 //     *
 //     */
 //    public void filter(ContainerRequestContext requestContext) throws IOException {
