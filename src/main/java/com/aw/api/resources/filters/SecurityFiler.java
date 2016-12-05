@@ -98,6 +98,7 @@ public class SecurityFiler implements ContainerRequestFilter {
      */
     public void filter(ContainerRequestContext requestContext) throws IOException {
         try {
+            System.out.println("zxc");
             String authHeader = requestContext.getHeaderString(HttpHeaders.AUTHORIZATION);
             if (authHeader == null || !authHeader.startsWith(AUTHORIZATION_HEADER_PREFIX)) {
                 throw new NotAuthorizedException("Falta la token en el Header.");
