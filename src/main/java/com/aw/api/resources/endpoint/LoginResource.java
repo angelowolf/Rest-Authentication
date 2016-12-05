@@ -17,6 +17,7 @@ import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 import model.DTOUsuario;
+import model.Token;
 
 /**
  *
@@ -45,7 +46,7 @@ public class LoginResource {
             String token = GeneradorToken.getInstancia().generarToken();
             usuario.setToken(token);
             ContenedorSesiones.getInstancia().agregarUsuario(usuario);
-            return Response.ok(token).build();
+            return Response.ok(new Token(token)).build();
         } catch (Exception e) {
             return Response.status(Response.Status.UNAUTHORIZED).build();
         }
