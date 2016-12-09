@@ -1,6 +1,7 @@
 package com.aw.api.seguridad;
 
 import java.util.HashMap;
+import java.util.Map;
 
 /**
  *
@@ -57,4 +58,13 @@ public class ContenedorSesiones {
         }
         return usuario;
     }
+    
+    public void impirmir() {
+        for (Map.Entry<String, IUsuario> entry : sesiones.entrySet()) {
+            String key = entry.getKey();
+            IUsuario value = entry.getValue();
+            System.out.println("key " + key);
+            System.out.println("value " + value.toString());
+        }
+}
 }
